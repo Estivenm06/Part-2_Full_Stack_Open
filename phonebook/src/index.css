@@ -1,4 +1,4 @@
-.error{
+.success{
     color: green;
     background: lightgray;
     padding: 10px;
@@ -8,7 +8,7 @@
     font-size: 20px;   
 }
 
-.error2{
+.error{
     color: red;
     background: lightgray;
     padding: 10px;

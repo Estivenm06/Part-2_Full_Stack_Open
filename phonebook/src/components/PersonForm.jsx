@@ -1,16 +1,14 @@
-import React from "react"
-
 const Formulary = (prop) => {
     return (
       <form onSubmit={prop.addperson}>
         <div>
-          name: <input type='text' value={prop.newName} onChange={prop.handlenameChange} />
+          name: <input type='text' value={prop.name} onChange={prop.handlenameChange} placeholder="Insert Your Name" />
         </div>
         <div>
-          number: <input type='number' value={prop.newNumber} onChange={prop.handlenumberChange} />
+          number: <input type='number' value={prop.number} onChange={prop.handlenumberChange} placeholder="Insert Your Phone Number"/>
         </div>
         <div>
-          <button type="submit">{prop.text2}</button>
+          <button type="submit">add</button>
         </div>
       </form>
     )

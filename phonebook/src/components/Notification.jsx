@@ -1,11 +1,15 @@
-import React from 'react';
-
-const Notification = ({message}) => {
-    if(message === null){
-        return null
+/* eslint-disable react/prop-types */
+const Notification = ({alert}) => {
+    if (!alert || !alert.message || !alert.type) {
+        return null; // Return null if alert is not properly defined
     }
+    const {message, type} = alert;
+    console.log(message);
+    console.log(type);
+    
+    
     return (
-        <div>
+        <div className={`${type}`}>
             {message}
         </div>
     );

@@ -1,23 +1,9 @@
-/* Exercises 2.6 - 2.11 */
-/*
-import React from "react"
+/* eslint-disable react/prop-types */
 
-const PersonsShow = ({ persons }) => {
+const PersonsShow = ({person, deletePerson}) => {
   return (
     <div>
-      {persons.name} {persons.number}
-    </div>
-  )
-}
-
-export default PersonsShow;
-*/
-import React from 'react';
-
-const PersonsShow = ({persons, text, deletePerson}) => {
-  return (
-    <div>
-      {persons.name} {persons.number} <button onClick={deletePerson}>{text}</button>
+      {person.name} {person.number} <button onClick={() => {if(window.confirm(`Delete ${person.name} ?`)){deletePerson(person.id)}}}>delete</button>
     </div>
   );
 };
