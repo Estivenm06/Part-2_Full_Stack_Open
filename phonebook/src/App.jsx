@@ -47,7 +47,7 @@ const App = () => {
       .catch((error) => {
         console.log("rejected", error);
       });
-  }, [persons]);
+  }, []);
 
   //POST AND PUT
   const addperson = (e) => {
